@@ -216,19 +216,19 @@ function Index() {
           </Button>
         </div>
       </div>
-      <div className="my-9 d-flex flex-column justify-content-center  align-items-center text-center">
+      <div className="schedule my-1 my-lg-9 d-flex flex-column justify-content-center  align-items-center text-center">
         <Row className="w-100 px-lg-8">
-          <Col lg="6">
+          <Col lg="6" className="d-lg-block d-none">
             <img className="m-4 w-75" src={require("../assets/img/landingpage/chat.png")} />
           </Col>
-          <Col lg="6" className="py-6 text-lg-left">
+          <Col lg="6" className="py-6 text-lg-left flex flex-column flex-lg-row justify-content-center align-items-center">
             <p className="font-weight-800 text-orange ">
               SCHEDULE
             </p>
-            <h1 className="font-weight-800 text-darker display-3 w-75">
+            <h1 className="font-weight-800 text-darker display-4 ">
               Great Customer relationship starts here
             </h1>
-            <p className="w-75 my-4 text-gray">
+            <p className="w-75 my-4 text-gray info">
               Aute dolor minim sit tempor sunt sunt aliquip excepteur adipisicing excepteur. Pariatur fugiat laborum id sint tempor laboris dolor. 
             </p>
             <a className="text-blue font-weight-700 flex justify-content-center">
@@ -238,17 +238,17 @@ function Index() {
           </Col>
         </Row>
       </div>
-      <div className="my-9 d-flex flex-column justify-content-center  align-items-center text-center">
+      <div className="schedule my-1 my-lg-5 d-flex flex-column justify-content-center  align-items-center text-center">
         <Row className="w-100 px-lg-8">
 
           <Col lg="6" className="py-6 text-lg-left">
             <p className="font-weight-800 text-orange ">
               SCHEDULE
             </p>
-            <h1 className="font-weight-800 text-darker display-3 w-75">
+            <h1 className="font-weight-800 text-darker display-4 ">
               Great Customer relationship starts here
             </h1>
-            <p className="w-75 my-4 text-gray">
+            <p className=" my-4 text-gray info">
               Aute dolor minim sit tempor sunt sunt aliquip excepteur adipisicing excepteur. Pariatur fugiat laborum id sint tempor laboris dolor. 
             </p>
             <a className="text-blue font-weight-700 flex justify-content-center">
@@ -256,7 +256,7 @@ function Index() {
               <BsArrowRightShort className="h4 mr-3 align-self-center mb-0 text-blue"/>
             </a>
           </Col>
-          <Col lg="6">
+          <Col lg="6" className="d-lg-block d-none">
             <img className="m-4 w-75" src={require("../assets/img/landingpage/smartphone.png")} />
           </Col>
         </Row>
