@@ -34,15 +34,16 @@ class SimpleFooter extends React.Component {
     return (
       <>
         <footer className=" footer">
-          <Container>
-            <Row className=" row-grid align-items-center mb-5">
-              <Col lg="6">
-                <h3 className=" text-primary font-weight-light mb-2">
-                  Thank you for supporting us!
+          <div className="w-auto mx-5">
+            <Row className="w-auto">
+              <Col lg="3" className="heading">
+                <h3 className="">
+                  <img src={require('../../assets/img/brand/muszica.png')} />
+                  <span className="ml-3 font-weight-700">The next design</span>
                 </h3>
-                <h4 className=" mb-0 font-weight-light">
-                  Let's get in touch on any of these platforms.
-                </h4>
+                <p className="text-muted py-4 ">
+                  Labore duis esse irure dolor laboris mollit nostrud. Sunt incididunt sunt do commodo.Sunt incididunt sunt do commodo.
+                </p>
               </Col>
               <Col className="text-lg-center btn-wrapper" lg="6">
                 <Button
@@ -154,7 +155,7 @@ class SimpleFooter extends React.Component {
                 </Nav>
               </Col>
             </Row>
-          </Container>
+          </div>
         </footer>
       </>
     );

@@ -1,11 +1,47 @@
 import React from "react";
 
 import Navbar from "../components/Navbars/DemoNavbar";
+import Footer from "../components/Footers/SimpleFooter";
 import { Container, Row, Col, Button } from "reactstrap";
 
-import { BsAsterisk, BsFillBarChartFill,BsArrowRightShort } from "react-icons/bs";
+import {
+  BsAsterisk,
+  BsFillBarChartFill,
+  BsArrowRightShort,
+  BsCheck,
+  BsFillArrowRightCircleFill,
+  BsArrowLeftShort
+} from "react-icons/bs";
+
+import {IoMdArrowDroprightCircle} from "react-icons/io";
+
+import {AiFillStar} from "react-icons/ai";
+
+import Slider from "react-slick";
+import { useMediaQuery } from "react-responsive";
+import Form from "reactstrap/lib/Form";
 
 function Index() {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: isTabletOrMobile ? 1 : 3,
+    slidesToScroll: 1,
+    centerPadding: "0px",
+    centerMode: true,
+    nextArrow:
+    <div>
+     <BsFillArrowRightCircleFill className="text-black rounded-pill testemonial-next"/>
+     </div>,
+     prevArrow:
+     <div>
+       <BsArrowLeftShort className="text-gray rounded-pill testemonial-prev"/>
+     </div>,
+  };
+
   return (
     <div>
       <Navbar />
@@ -162,7 +198,7 @@ function Index() {
 
         <Row className="w-100 cards-list  px-lg-9 mt-3">
           <Col lg="4">
-            <div className="section-card border py-5 px-lg-4 border-top-0">
+            <div className="section-card  py-5 px-lg-4 ">
               <img
                 className="my-3"
                 alt=""
@@ -177,7 +213,7 @@ function Index() {
             </div>
           </Col>
           <Col lg="4">
-            <div className="section-card py-5 px-4 border-top-0 bg-white card-center">
+            <div className="section-card py-5 px-4 bg-white ">
               <img
                 className="my-3"
                 alt=""
@@ -192,7 +228,7 @@ function Index() {
             </div>
           </Col>
           <Col lg="4">
-            <div className="section-card border py-5 px-4 border-top-0">
+            <div className="section-card  py-5 px-4 ">
               <img
                 className="my-3"
                 alt=""
@@ -219,48 +255,210 @@ function Index() {
       <div className="schedule my-1 my-lg-9 d-flex flex-column justify-content-center  align-items-center text-center">
         <Row className="w-100 px-lg-8">
           <Col lg="6" className="d-lg-block d-none">
-            <img className="m-4 w-75" src={require("../assets/img/landingpage/chat.png")} />
+            <img
+              className="m-4 w-75"
+              src={require("../assets/img/landingpage/chat.png")}
+            />
           </Col>
-          <Col lg="6" className="py-6 text-lg-left flex flex-column flex-lg-row justify-content-center align-items-center">
-            <p className="font-weight-800 text-orange ">
-              SCHEDULE
-            </p>
+          <Col
+            lg="6"
+            className="py-6 text-lg-left flex flex-column flex-lg-row justify-content-center align-items-center"
+          >
+            <p className="font-weight-800 text-orange ">SCHEDULE</p>
             <h1 className="font-weight-800 text-darker display-4 ">
               Great Customer relationship starts here
             </h1>
             <p className="w-75 my-4 text-gray info">
-              Aute dolor minim sit tempor sunt sunt aliquip excepteur adipisicing excepteur. Pariatur fugiat laborum id sint tempor laboris dolor. 
+              Aute dolor minim sit tempor sunt sunt aliquip excepteur
+              adipisicing excepteur. Pariatur fugiat laborum id sint tempor
+              laboris dolor.
             </p>
             <a className="text-blue font-weight-700 flex justify-content-center">
-              Learn more about publishing 
-              <BsArrowRightShort className="h4 mr-3 align-self-center mb-0 text-blue"/>
+              Learn more about publishing
+              <BsArrowRightShort className="h4 mr-3 align-self-center mb-0 text-blue" />
             </a>
           </Col>
         </Row>
       </div>
       <div className="schedule my-1 my-lg-5 d-flex flex-column justify-content-center  align-items-center text-center">
         <Row className="w-100 px-lg-8">
-
           <Col lg="6" className="py-6 text-lg-left">
-            <p className="font-weight-800 text-orange ">
-              SCHEDULE
-            </p>
+            <p className="font-weight-800 text-orange ">SCHEDULE</p>
             <h1 className="font-weight-800 text-darker display-4 ">
               Great Customer relationship starts here
             </h1>
             <p className=" my-4 text-gray info">
-              Aute dolor minim sit tempor sunt sunt aliquip excepteur adipisicing excepteur. Pariatur fugiat laborum id sint tempor laboris dolor. 
+              Aute dolor minim sit tempor sunt sunt aliquip excepteur
+              adipisicing excepteur. Pariatur fugiat laborum id sint tempor
+              laboris dolor.
             </p>
             <a className="text-blue font-weight-700 flex justify-content-center">
-              Learn more about publishing 
-              <BsArrowRightShort className="h4 mr-3 align-self-center mb-0 text-blue"/>
+              Learn more about publishing
+              <BsArrowRightShort className="h4 mr-3 align-self-center mb-0 text-blue" />
             </a>
           </Col>
           <Col lg="6" className="d-lg-block d-none">
-            <img className="m-4 w-75" src={require("../assets/img/landingpage/smartphone.png")} />
+            <img
+              className="m-4 w-75"
+              src={require("../assets/img/landingpage/smartphone.png")}
+            />
           </Col>
         </Row>
       </div>
+      <div className="pricing my-1 my-lg-5 py-8 d-flex flex-lg-col align-items-center justify-content-center">
+        <div className="card px-6 text-center py-5 rounded-lg shadow-lg">
+          <h1 className="font-weight-900 ">Pricing</h1>
+          <Row className="mt-3">
+            <Col className="mx-3">
+              <p className="mb-0 text-gray font-weight-600">Starter</p>
+              <h4 className="my-0 font-weight-700">$5,000/mo</h4>
+            </Col>
+            <Col className="mx-3">
+              <p className="mb-0 text-gray font-weight-600">Business</p>
+              <h4 className="my-0 font-weight-700">$8,000/mo</h4>
+            </Col>
+          </Row>
+          <div className=" d-flex justify-content-between align-items-center mt-5">
+            <div lassName="align-self-center text-left">
+              Ready to Get Started?
+            </div>
+            <div>
+              <Button color="primary" className="rounded-0 primary-btn-shadow">
+                Get Started
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="feature mx-lg-9 my-8">
+        <Row>
+          <Col lg="6" className="d-flex flex-column justify-content-center align-items-center align-items-lg-start ">
+            <h1 className="display-1 mr-3 text-center text-lg-left text-dark font-weight-900 ">
+              Future of support with new shape
+            </h1>
+            <p className="w-75 text-center text-lg-left text-gray-dark ">
+              Id nostrud reprehenderit voluptate nisi ipsum id. voluptate nisi
+              ipsum id.
+            </p>
+
+            <ul className="list-unstyled">
+              <li className="my-3">
+                <BsCheck className="icon-sm p-1 text-white bg-primary rounded-pill" />
+                <span className="pl-3 font-weight-400">
+                  UX content strategy.
+                </span>
+              </li>
+              <li className="my-3">
+                <BsCheck className="icon-sm p-1 text-white bg-primary rounded-pill" />
+                <span className="pl-3 font-weight-400">
+                  UX content strategy.
+                </span>
+              </li>
+            </ul>
+            <div>
+              <Button
+                color="primary"
+                className="mt-lg-6 mt-2 my-2  px-5 rounded-pill py-4 primary-btn-shadow"
+              >
+                <span className="h4 text-white font-weight-300 ">
+                  Get Started
+                </span>
+              </Button>
+            </div>
+          </Col>
+          <Col lg="6" className="">
+            <Row>
+              {[1, 2, 3, 4].map((item, index) => {
+                return (
+                  <Col lg="6">
+                    <div className="card py-3 px-3 my-3 pb-4 flex flex-column justify-content-center align-items-center justify-content-lg-start align-items-lg-start">
+                      <img
+                        className="w-25 mt-3 ml-3"
+                        src={require("../assets/img/landingpage/feature/layers.png")}
+                      />
+                      <h4 className="mt-4 font-weight-600 text-darker">
+                        Web Design
+                      </h4>
+                      <p className="mb-3 mt-1 text-muted mx-5 mx-lg-0 text-center font-weight-400 text-lg-left">
+                        Eiusmod elit aliquip nulla aliquip velit veniam dolor.
+                      </p>
+                      <a className="font-weight-600 py-1 text-purple text-uppercase">
+                        Learn More
+                      </a>
+                    </div>
+                  </Col>
+                );
+              })}
+            </Row>
+          </Col>
+        </Row>
+      </div>
+      <div className="d-flex justify-content-center align-items-center flex-column py-6">
+        <h1 className="text-black font-weight-600 text-center text-lg-left">
+          What our happy client say
+        </h1>
+        <p className="font-weight-400 my-3 text-muted ">
+          Things that make it the best place to start trading
+        </p>
+      </div>
+
+      <Slider {...settings}>
+        {[1, 2, 3, 4].map((item, index) => {
+          return (
+            <div className="m-lg-5 m-2">
+              <div className="d-flex flex-column justify-content-center align-items-center py-5 px-2 testimonial">
+                <img className="rounded-pill" src="https://picsum.photos/200" />
+                <div className="mt-3">
+                {[1,2,3,4].map((item, index) => {
+                    return (
+                        <AiFillStar className="text-primary h4" />
+                    )
+                })} 
+                </div>
+                <h4 className="font-weight-800 mb-2 text-darker">
+                  John de marti
+                </h4>
+                <p className="w-75 text-center text-muted">
+                  Proident minim amet cupidatat deserunt elit nostrud est. Id
+                  laboris ad ex nulla ad anim ullamco. Non do excepteur id Lorem
+                  in nulla in ullamco minim.
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </Slider>
+
+      <div className="mt-9 mb-5">
+        <hr />
+      </div>
+
+      <div className="my-5 mx-lg-4">
+        <div className="mx-lg-9 align-items-center d-flex justify-content-center ">
+          <Row className="w-100 p-lg-4 py-6 newsletter">
+            <Col lg="6" className="text-white pl-lg-6 d-flex flex-column justify-content-center align-items-center py-4">
+              <h1 className="text-white font-weight-700 text-center ">
+                Subscribe Newsletter
+              </h1>
+              <p className="content px-4 px-lg-0">
+                Best cooks and best delivery guys all at your services. Hot tasty food
+              </p>
+            </Col>
+            <Col lg="6" className="d-flex flex-column justify-content-center align-items-center">
+              <form>
+                <div className="form d-flex ">
+                    <input className="p-4 pr-0 border-0" placeholder="Enter Email Address"/>
+                    <Button>
+                        <span>Discover</span>
+                        <IoMdArrowDroprightCircle className="icon-sm ml-2" />
+                    </Button>
+                </div>
+              </form>
+            </Col>
+          </Row> 
+        </div>
+      </div>
+      {/* <Footer/> */}
     </div>
   );
 }

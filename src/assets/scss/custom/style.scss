@@ -146,11 +146,15 @@ $primary : #010AE9;
         img{
             width: 130px;
         }
-        .card-center{
-            box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.052);
-        }
         .section-card{
             border-radius: 20px;
+            transition: all 0.5s ease-in-out;
+            border: 1px solid rgba(105, 105, 105, 0.11);
+            border-top: 0px;
+            &:hover{
+                box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.052);
+                border-color: transparent;
+            }
         }
     }
 
@@ -172,6 +176,136 @@ $primary : #010AE9;
     0px 41.8px 33.4px rgba(94, 114, 227, 0.05),
     0px 100px 80px rgba(94, 114, 227, 0.07)
   ;
+}
+
+.pricing{
+    background-color: #F4FDFE;
+    .card{}
+}
+
+.feature{
+    .card{
+        border-radius: 13px;
+        border: 1px solid rgba(128, 128, 128, 0.247);
+        border-bottom: 0px;
+        border-left: 0px;
+        transition: all 0.5s ease-in-out;
+
+        &:hover{
+            box-shadow: 10px 0px 60px 0px rgba(0, 0, 0, 0.052);
+            border-color: transparent;
+        }
+    }
+}
+
+.testimonial{
+    img{
+        width: 60px;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.123);
+    }
+    transition: all 0.5s ease-in-out;
+    width: 95%;
+    border-radius: 10px;
+    border: 1px solid rgba(146, 146, 146, 0.151); 
+
+}
+
+.slick-active{
+    .testimonial{
+        border: 1px solid rgba(146, 146, 146, 0.151); 
+    }
+}
+
+.slick-center{
+    .testimonial{
+        border: 1px solid rgba(146, 146, 146, 0); 
+        box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.034);
+    }
+}
+
+.slick-next{
+    right: 46vw;
+    top: 50vh;
+    &::before{
+        display: none;
+    }
+    .testemonial-next{
+        width: 50px;
+        height: 50px;
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+        &:hover{
+            transform: scale(0.95);
+        }
+    }
+}
+
+.slick-prev{
+    left: 48.5vw;
+    top: 50.5vh;
+
+    &::before{
+        display: none;
+    }
+
+    .testemonial-prev{
+        width: 40px;
+        height: 40px;
+        transform: scale(1);
+        transition: all 0.5s ease-in-out;
+
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+}
+
+.newsletter{
+    border-radius: 35px;
+    background-color: #4D53E4;
+
+    .content{
+        width: 70%;
+        line-height: 2.5rem;
+    }
+
+    .form{
+        input{
+            border-radius: 20px 0px 0px 20px;
+        }
+        button{
+            border-radius: 0px 20px 20px 0px;
+            background-color: #2FB652;
+            border: 0px;
+            color: white;
+            text-transform: none;
+            span{
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.footer{
+    .heading{
+        h3{
+            img{
+                width: 25px;
+            }
+
+            span{
+                font-size: 1rem;
+            }
+        }
+
+        p{
+            font-size: 1rem;
+            font-weight: 300;
+            text-transform: none;
+            line-height: 2rem;
+        }
+    }
 }
 
 @media (max-width: 575.98px) {}
@@ -210,6 +344,27 @@ $primary : #010AE9;
         .form-button{
             img{
                 width: 135px;
+
+            }
+        }
+    }
+
+    .slick-prev {
+        left: 37.5vw;
+        top: 50.5vh;
+    }
+
+    .newsletter{
+        .content{
+            width: auto;
+            margin: auto;
+            text-align: center;
+        }
+
+        .form{
+            input{
+            }
+            button{
 
             }
         }
