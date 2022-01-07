@@ -225,7 +225,7 @@ $primary : #010AE9;
 
 .slick-next{
     right: 46vw;
-    top: 50vh;
+    top: 60vh;
     &::before{
         display: none;
     }
@@ -242,7 +242,7 @@ $primary : #010AE9;
 
 .slick-prev{
     left: 48.5vw;
-    top: 50.5vh;
+    top: 60.5vh;
 
     &::before{
         display: none;
@@ -332,8 +332,9 @@ $primary : #010AE9;
         padding: 10px;
         .form-input{
             input{
-                width: 230px;
+                width: 150px;
                 padding: 14px;   
+                margin-right: 10px;
                 
             }
 
@@ -351,7 +352,7 @@ $primary : #010AE9;
 
     .slick-prev {
         left: 37.5vw;
-        top: 50.5vh;
+        top: 60.5vh;
     }
 
     .newsletter{

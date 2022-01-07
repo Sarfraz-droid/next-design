@@ -46,7 +46,7 @@ function Index() {
     <div>
       <Navbar />
       <div className="mx-lg-6 mt-6">
-        <Row>
+        <Row className="w-100">
           <Col md="6">
             <div className="font-weight-600 text-center text-lg-left text-primary h6 ">
               <BsAsterisk />
@@ -108,13 +108,16 @@ function Index() {
             </div>
           </Col>
         </Row>
-        <Row className="mt-5 justify-content-center d-flex align-items-center ">
+        <Row className="w-100 ml-1 ml-lg-0 mt-5 justify-content-center d-flex align-items-center ">
           <Col
             lg="3"
-            className="justify-content-center align-content-center d-flex flex-column align-items-lg-baseline"
           >
-            <div className=" text-black font-weight-400 d-inline-block pt-3 border-top border-dark mb-3 text-center mx-auto mx-lg-0">
+            <div 
+              className="justify-content-center align-content-center d-flex flex-column align-items-lg-baseline"
+            >
+            <div className=" text-black font-weight-400 d-inline-block pt-3 border-top border-dark mb-3 text-center  mx-lg-0">
               Proud Pattern at Hubspot Segment
+            </div>
             </div>
           </Col>
 
@@ -143,7 +146,7 @@ function Index() {
       </div>
 
       <div className="px-lg-9 purpose-section py-6 mt-7">
-        <Row>
+        <Row className="w-100 m-0">
           <Col
             lg="4"
             className="justify-content-center align-items-center d-flex flex-column text-center text-lg-left align-items-lg-baseline "
@@ -331,7 +334,7 @@ function Index() {
         </div>
       </div>
       <div className="feature mx-lg-9 my-8">
-        <Row>
+        <Row className="w-100">
           <Col lg="6" className="d-flex flex-column justify-content-center align-items-center align-items-lg-start ">
             <h1 className="display-1 mr-3 text-center text-lg-left text-dark font-weight-900 ">
               Future of support with new shape
@@ -366,8 +369,8 @@ function Index() {
               </Button>
             </div>
           </Col>
-          <Col lg="6" className="">
-            <Row>
+          <Col lg="6" className="pr-0">
+            <Row className="w-100 m-0">
               {[1, 2, 3, 4].map((item, index) => {
                 return (
                   <Col lg="6">
