@@ -437,17 +437,17 @@ function Index() {
       </div>
 
       <div className="my-5 mx-lg-4">
-        <div className="mx-lg-9 align-items-center d-flex justify-content-center ">
+        <div className="mx-lg-8 align-items-center d-flex justify-content-center ">
           <Row className="w-100 p-lg-4 py-6 newsletter">
-            <Col lg="6" className="text-white pl-lg-6 d-flex flex-column justify-content-center align-items-center py-4">
-              <h1 className="text-white font-weight-700 text-center ">
+            <Col lg="6" className="text-white pl-lg-3 d-flex flex-column justify-content-center align-items-center py-4 align-items-lg-start">
+              <h1 className="text-white font-weight-700 text-center text-lg-left pl-3 pl-lg-0">
                 Subscribe Newsletter
               </h1>
               <p className="content px-4 px-lg-0">
                 Best cooks and best delivery guys all at your services. Hot tasty food
               </p>
             </Col>
-            <Col lg="6" className="d-flex flex-column justify-content-center align-items-center">
+            <Col lg="6" className="d-flex flex-column justify-content-center align-items-center  ">
               <form>
                 <div className="form d-flex ">
                     <input className="p-4 pr-0 border-0" placeholder="Enter Email Address"/>
@@ -461,7 +461,7 @@ function Index() {
           </Row> 
         </div>
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

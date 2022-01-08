@@ -225,7 +225,7 @@ $primary : #010AE9;
 
 .slick-next{
     right: 46vw;
-    top: 60vh;
+    top: 74.5vh;
     &::before{
         display: none;
     }
@@ -242,7 +242,7 @@ $primary : #010AE9;
 
 .slick-prev{
     left: 48.5vw;
-    top: 60.5vh;
+    top: 75vh;
 
     &::before{
         display: none;
@@ -288,6 +288,7 @@ $primary : #010AE9;
 }
 
 .footer{
+    padding-top: 5%;
     .heading{
         h3{
             img{
@@ -300,10 +301,19 @@ $primary : #010AE9;
         }
 
         p{
-            font-size: 1rem;
+            font-size: 0.75rem;
             font-weight: 300;
             text-transform: none;
-            line-height: 2rem;
+            line-height: 1.4rem;
+        }
+    }
+
+    .footer-list{
+        li{
+                font-size: 0.75rem;
+                font-weight: 300;
+                text-transform: none;
+                line-height: 1.4rem;
         }
     }
 }
