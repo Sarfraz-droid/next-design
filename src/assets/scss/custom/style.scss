@@ -360,12 +360,17 @@ $primary : #010AE9;
         }
     }
 
+    .slick-next{
+        top: 60vh;
+    }
+
     .slick-prev {
         left: 37.5vw;
         top: 60.5vh;
     }
 
     .newsletter{
+        border-radius: 0px;
         .content{
             width: auto;
             margin: auto;
@@ -378,6 +383,12 @@ $primary : #010AE9;
             button{
 
             }
+        }
+    }
+
+    .footer{
+        .footer-list{
+            display: none;
         }
     }
 }
